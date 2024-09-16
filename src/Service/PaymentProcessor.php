@@ -22,11 +22,11 @@ class PaymentProcessor
             } elseif ($processor === 'stripe') {
                 $this->paypalPaymentProcessor->pay($amount);
             } else {
-                throw new Exception('Invalid payment processor');
+                throw new \Exception('Invalid payment processor');
 
             }
         } catch (\Exception $e) {
-            throw new Exception('Payment failed: ' . $e->getMessage());
+            throw new \Exception('Payment failed: ' . $e->getMessage());
         }
     }
 }

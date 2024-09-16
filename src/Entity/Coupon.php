@@ -34,9 +34,9 @@ class Coupon
         return $this->code;
     }
 
-    public function setцocode(string $цocode): static
+    public function setcode(string $code): static
     {
-        $this->code = $цocode;
+        $this->code = $code;
 
         return $this;
     }
