@@ -10,7 +10,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Coupon
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
+    #[ORM\GeneratedValue(strategy: 'SEQUENCE')]
     #[ORM\Column]
     private ?int $id = null;
 
