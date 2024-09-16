@@ -23,7 +23,6 @@ class ProductController extends AbstractController
         $this->paymentProcessor = $paymentProcessor;
     }
 
-    #[Route('/calculate-price', methods: ['POST'])]
     public function calculatePrice(Request $request, ValidatorInterface $validator): JsonResponse
     {
         $data = json_decode($request->getContent(), true);
@@ -46,7 +45,6 @@ class ProductController extends AbstractController
         }
     }
 
-    #[Route('/purchase', methods: ['POST'])]
     public function purchase(Request $request, ValidatorInterface $validator): JsonResponse
     {
         $data = json_decode($request->getContent(), true);
